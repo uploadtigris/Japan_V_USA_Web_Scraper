@@ -1,7 +1,7 @@
 # JapanVUSAStats
 A comparison between Japanese and USA Living Cost
 
-<h2>Sources:</h1>
+<h2>Sources:</h2>
     <h4>USA</h4>
         <li>https://www.usa.gov/statistics</li>
     <h4<Japan</h4>
