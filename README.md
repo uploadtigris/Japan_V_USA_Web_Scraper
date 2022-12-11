@@ -5,4 +5,5 @@ A comparison between Japanese and USA Living Cost
     <li>https://www.e-stat.go.jp/en/stat-search?page=1&query=salary&layout=dataset</li>
     <li>https://www.usa.gov/statistics</li>
     <li>https://www.mhlw.go.jp/english/database/db-yl/03.html</li>
+    <li>https://www.numbeo.com/cost-of-living/country_result.jsp?country=Japan</li>
     
