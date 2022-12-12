@@ -11,6 +11,7 @@ A comparison between Japanese and USA Living Cost
         <li>https://www.numbeo.com/cost-of-living/country_result.jsp?country=Japan</li>
     <h4>Multi-Use</h4>
          <li>https://www.numbeo.com/cost-of-living/</li>
+         <li>https://www.getexchangerates.com/jpy/</li>
     <h4>Foreign Exchange Rate API</h4>
         <li>https://apilayer.com/marketplace/currency_data-api#documentation-tab</li>
     <h4>Data Science Occupation Specific Links</h4>
