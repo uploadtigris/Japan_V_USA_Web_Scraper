@@ -22,7 +22,6 @@ avg_mo_single_expense_JP = 0
 usd_Mo_Net_Salary_JP = 0 #Mo Salary converted into USD
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-#print values found in USA document
 price_list = []
 avg_mo_expense = []
 
@@ -63,11 +62,13 @@ for title in figure:
 jyp2usd_figure = float(td_options[2])
 
 #Convert to USD ^^^^^^^^^^^^^^^^^^^^^^^^^^^(IMPORTANT FIGURES)
-usd_Mo_Net_Salary_JP = (jyp2usd_figure) * (avgMoNetSalary_JP)
-usd_single_exp_JP = (jyp2usd_figure) * (avg_mo_single_expense_JP)
-usd_1bdInCity_JP = (jyp2usd_figure) * (inside_city_apt_1person)
-usd_2bdInCity_JP = (jyp2usd_figure) * (outside_city_apt_1person)
+usd_Mo_Net_Salary_JP = round((jyp2usd_figure) * (avgMoNetSalary_JP))
+usd_single_exp_JP = round((jyp2usd_figure) * (avg_mo_single_expense_JP))
+usd_1bdInCity_JP = round((jyp2usd_figure) * (inside_city_apt_1person))
+usd_2bdInCity_JP = round((jyp2usd_figure) * (outside_city_apt_1person))
+yrly_salary_JP = (int(round(usd_Mo_Net_Salary_JP))) * 12
 
+print(yrly_salary_JP)
 print(usd_Mo_Net_Salary_JP)
 print(usd_single_exp_JP)
 print(usd_1bdInCity_JP)
@@ -85,20 +86,45 @@ for title in element2:
 
 avgMoNetSalary1_US = (price_list_US[-2])
 avgMoNetSalary_US = float(avgMoNetSalary1_US.replace('$', '').replace(',', ''))
-print(avgMoNetSalary_US)
 
 #1 Bd Apartment in City Center
 inside_city_apt_1person0_US = (price_list_US[-8])
 inside_city_apt_1person_US = float(inside_city_apt_1person0_US.replace('$', '').replace(',', ''))
-print(inside_city_apt_1person_US)
 
 #1 Bd Apartment outside City Center
 outside_city_apt_1person0_US = (price_list_US[-7])
 outside_city_apt_1person_US = float(outside_city_apt_1person0_US.replace('$', '').replace(',', ''))
-print(outside_city_apt_1person_US)
 
 #Average Mo. Expense for a single person in USA (NI rent)
+aysms1 = soup2.select('span.emp_number')
+for title in aysms1:
+    avg_mo_expense_US.append(title.text)
+avg_mo_single_expense1 = avg_mo_expense_US[1]
+avg_mo_single_expense_US = float(avg_mo_single_expense1.replace('$', '').replace(',', ''))
 
+#^^^^^^^^^^^^^^^^^^^^^^^^^^^(IMPORTANT FIGURES)
+
+yrly_salary_US = avgMoNetSalary_US * 12
+
+print(int(round(yrly_salary_US)))
+print(int(round(avgMoNetSalary_US)))
+print(int(round(avg_mo_single_expense_US)))
+print(int(round(inside_city_apt_1person_US)))
+print(int(round(outside_city_apt_1person_US)))
+print('______________\n')
+
+##########################################################################
+
+print('Percentage of Income spent of Rent and Living Expenses')
+print('*as a single person living in the inner city:\n')
+
+after_rent_and_living_US = avgMoNetSalary_US - (inside_city_apt_1person_US + avg_mo_single_expense_US)
+percent_of_income = (inside_city_apt_1person_US + avg_mo_single_expense_US)/avgMoNetSalary_US
+print(percent_of_income)
+
+after_rent_and_living_JP = usd_Mo_Net_Salary_JP - (usd_1bdInCity_JP + usd_single_exp_JP)
+percent_of_income_JP = (usd_1bdInCity_JP + usd_single_exp_JP)/usd_Mo_Net_Salary_JP
+print(percent_of_income_JP, '\n')
 
 
 #MatPlotLib
