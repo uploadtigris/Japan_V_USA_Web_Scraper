@@ -1,4 +1,4 @@
-# JapanVUSAStats
+# Japan Versus USA Web Scraper Project
 A comparison between Japanese and USA Living Cost
 
 <h2>Sources:</h2>
