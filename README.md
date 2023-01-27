@@ -16,6 +16,8 @@ A comparison between Japanese and USA Living Cost
         <li>https://apilayer.com/marketplace/currency_data-api#documentation-tab</li>
     <h4>Data Science Occupation Specific Links</h4>
         <li>https://towardsdatascience.com/the-us-data-science-job-market-in-2020-463520a9d5a</li>
+    <h4>CPI Calculator</h4>
+        <li>https://www.in2013dollars.com/us/inflation/2016?amount=11</li>
     
 
 
