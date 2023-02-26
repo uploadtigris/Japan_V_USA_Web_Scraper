@@ -120,11 +120,11 @@ print('*as a single person living in the inner city:\n')
 
 after_rent_and_living_US = avgMoNetSalary_US - (inside_city_apt_1person_US + avg_mo_single_expense_US)
 percent_of_income = (inside_city_apt_1person_US + avg_mo_single_expense_US)/avgMoNetSalary_US
-print(percent_of_income)
+print('% in America:', percent_of_income * 100)
 
 after_rent_and_living_JP = usd_Mo_Net_Salary_JP - (usd_1bdInCity_JP + usd_single_exp_JP)
 percent_of_income_JP = (usd_1bdInCity_JP + usd_single_exp_JP)/usd_Mo_Net_Salary_JP
-print(percent_of_income_JP, '\n')
+print('% in Japan', percent_of_income_JP * 100, '\n')
 
 
 #MatPlotLib
