@@ -1,5 +1,5 @@
 # Japan Versus USA Web Scraper Project
-A comparison between Japanese and USA Living Cost
+A comparison between Japanese and USA Living Cost utilizing webscraper package Beautiful Soup
 
 <h2>Sources:</h2>
     <h4>USA</h4>
